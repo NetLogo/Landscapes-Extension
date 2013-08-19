@@ -8,6 +8,8 @@ A continuous function optimization problem is one where you are are trying to fi
 
 You can think of these functions as describing different [fitness landscapes](http://en.wikipedia.org/wiki/Fitness_landscape), hence the name of the extension.
 
+In the [demo folder](demo), you will find [landscapes.nlogo](demo/landscapes.nlogo), a very basic model that demonstrates the different landscapes that are available. The model is inspired by the [Hill climbing code example](http://modelingcommons.org/browse/one_model/2256#model_tabs_browse_info) from the NetLogo Models Library.
+
 ## Usage
 
 #### `landscapes:generate` _problem-name_ _patch-variable-name_
