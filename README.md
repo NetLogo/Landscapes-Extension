@@ -10,13 +10,13 @@ You can think of these functions as describing different [fitness landscapes](ht
 
 ## Usage
 
-`landscapes:generate` _problem-name_ _patch-variable-name_
+#### `landscapes:generate` _problem-name_ _patch-variable-name_
 
 What the extension does is take the problem function referred to by _problem-name_, make sure it is a maximization problem (by adding `* -1` to the minimization problems), map the problem domain to the NetLogo world size, normalize all the function values between 0.0 and 1.0, and assign the values to the patch variable named _patch-variable-name_. (The extension will give you an error message if the patch variable does not exist.)
 
 Neither problem names nor variable names are case sensitive.
 
-You can find out all the available problem names by using the `landscapes:list` primitive.
+You can find out all the available problem names by using the [`landscapes:list`](#landscapeslist) primitive.
 
 You will often want to color your patches according to the value of the variable that you used. This is easily done using [NetLogo's `scale-color` primitive](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#scale-color).
 
@@ -32,7 +32,7 @@ Here is an example:
 
 ![3 pot holes result](doc/3-pot-holes.png)
 
-`landscapes:list`
+####`landscapes:list`
 
 For example,
 
