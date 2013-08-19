@@ -34,6 +34,8 @@ Here is an example:
 
 ####`landscapes:list`
 
+Reports a list of the available problem names.
+
 For example,
 
     foreach landscapes:list print
