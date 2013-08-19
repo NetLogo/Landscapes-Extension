@@ -10,7 +10,7 @@ You can think of these functions as describing different [fitness landscapes](ht
 
 ## Usage
 
-`landscapes:generate _problem-name_ _patch-variable-name_`
+`landscapes:generate` _problem-name_ _patch-variable-name_
 
 What the extension does is take the problem function referred to by _problem-name_, make sure it is a maximization problem (by adding `* -1` to the minimization problems), map the problem domain to the NetLogo world size, normalize all the function values between 0.0 and 1.0, and assign the values to the patch variable named _patch-variable-name_. (The extension will give you an error message if the patch variable does not exist.)
 
