@@ -1,0 +1,15 @@
+*~
+*.orig
+target/
+classes/
+*.jar
+*.gz
+*.zip
+/.lib
+
+# eclipse files
+.project
+.classpath
+.cache
+.settings
+.texlipse
