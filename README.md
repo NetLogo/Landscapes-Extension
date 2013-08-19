@@ -107,7 +107,7 @@ will output:
     TEST FUNCTION F4 (QUARTIC FUNCTION)
     TEST FUNCTION F5 (SHEKEL'S FUNCTION)
 
-We do not provide documentation for the various problems. Using the **cycle** button in [the extension's demo]() will at least show you what they look like. OAT itself has [a file that lists the references for some of these problems](http://optalgtoolkit.cvs.sourceforge.net/viewvc/optalgtoolkit/optalgtoolkit/src/problems.cfo.properties?revision=1.3&content-type=text%2Fplain). You can also [browse OAT's source code](http://optalgtoolkit.cvs.sourceforge.net/viewvc/optalgtoolkit/optalgtoolkit/src/com/oat/domains/cfo/problems/) to figure out what they do exactly.
+We do not provide documentation for the various problems. Using the **cycle** button in [the extension's demo](demo/landscapes.nlogo) will at least show you what they look like. OAT itself has [a file that lists the references for some of these problems](http://optalgtoolkit.cvs.sourceforge.net/viewvc/optalgtoolkit/optalgtoolkit/src/problems.cfo.properties?revision=1.3&content-type=text%2Fplain). You can also [browse OAT's source code](http://optalgtoolkit.cvs.sourceforge.net/viewvc/optalgtoolkit/optalgtoolkit/src/com/oat/domains/cfo/problems/) to figure out what they do exactly.
 
 ## Building
 
