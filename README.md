@@ -30,6 +30,8 @@ Here is an example:
       ask patches [ set pcolor scale-color grey height 0 1 ]
     end
 
+will give you a view that looks like this (the whitest parts are the "peaks" of the landscape):
+
 ![3 pot holes result](doc/3-pot-holes.png)
 
 ####`landscapes:list`
