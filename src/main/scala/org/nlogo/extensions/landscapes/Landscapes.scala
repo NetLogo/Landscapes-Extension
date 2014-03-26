@@ -25,11 +25,11 @@ object Landscapes {
           if (v > max) max = v
           (p, v)
       }(collection.breakOut)
-    val normalizedResults = results.mapValues(r ⇒ (r - min) / (max - min))
-    val finalResults =
-      if (mappedProblem.problem.isMinimization)
-        normalizedResults.mapValues(1.0 - _)
-      else normalizedResults
-    for ((p, v) ← finalResults) p.setVariable(variableIndex, Double.box(v))
+    val isMin = mappedProblem.problem.isMinimization
+    for ((p, v) ← results) {
+      val v1 = (v - min) / (max - min) // normalize
+      val v2 = if (isMin) 1.0 - v1 else v1 // invert if needed
+      p.setVariable(variableIndex, Double.box(v2))
+    }
   }
 }
