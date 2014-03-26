@@ -15,8 +15,10 @@ object Landscapes {
     val mappedProblem = new MappedProblem(problemName,
       world.minPxcor, world.maxPxcor,
       world.minPycor, world.maxPycor)
-    val patches = world.patches.agents.asScala.collect { case p: Patch ⇒ p }
-    val results: Map[Patch, Double] = patches.map(p ⇒ p -> mappedProblem(p.pxcor, p.pycor))(collection.breakOut)
+    val results: Map[Patch, Double] =
+      world.patches.agents.asScala.collect {
+        case p: Patch ⇒ p -> mappedProblem(p.pxcor, p.pycor)
+      }(collection.breakOut)
     val min = results.values.min
     val max = results.values.max
     val normalizedResults = results.mapValues(r ⇒ (r - min) / (max - min))
@@ -24,6 +26,6 @@ object Landscapes {
       if (mappedProblem.problem.isMinimization)
         normalizedResults.mapValues(1.0 - _)
       else normalizedResults
-    patches.foreach(p ⇒ p.setVariable(variableIndex, Double.box(finalResults(p))))
+    for ((p, v) ← finalResults) p.setVariable(variableIndex, Double.box(v))
   }
 }
