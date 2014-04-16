@@ -2,7 +2,7 @@
 
 This extension is a thin wrapper around the continuous function optimization problems classes implemented in the [Optimization Algorithm Toolkit (OAT)](http://optalgtoolkit.sourceforge.net/).
 
-You can [download the Landscapes extension from here](https://github.com/NetLogo/Landscapes-Extension/releases/download/1.0.0/landscapes.zip). Just unzip the file under your NetLogo's `extensions` folder.
+You can [download the Landscapes extension from here](https://github.com/NetLogo/Landscapes-Extension/releases). Just unzip the file under your NetLogo's `extensions` folder.
 
 A continuous function optimization problem is one where you are are trying to find either the global optima or minima of a continuous function. [OAT](http://optalgtoolkit.sourceforge.net/) implements many such problems as Java classes. The goal of this extension is to make most of these problems easily usable from NetLogo.
 
