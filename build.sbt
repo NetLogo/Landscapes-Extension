@@ -1,16 +1,20 @@
-scalaVersion := "2.9.2"
+scalaVersion := "2.11.7"
 
-scalacOptions ++= Seq("-deprecation", "-unchecked", "-Xfatal-warnings")
+enablePlugins(org.nlogo.build.NetLogoExtension)
+
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-Xlint", "-Xfatal-warnings", "-encoding", "UTF8")
 
 libraryDependencies ++= Seq(
-  "org.nlogo" % "NetLogoLite" % "5.0.4" from
-    "http://ccl.northwestern.edu/netlogo/5.0.4/NetLogoLite.jar",
   "com.oat" % "optalgtoolkit" % "1.4" from
     "http://ccl.northwestern.edu/devel/optalgtoolkit-1.4.jar"
 )
 
 name := "landscapes"
 
-NetLogoExtension.settings
+netLogoExtName := "landscapes"
 
-NetLogoExtension.classManager := "org.nlogo.extensions.landscapes.LandscapesExtension"
+netLogoClassManager := "org.nlogo.extensions.landscapes.LandscapesExtension"
+
+netLogoVersion := "6.0.0-BETA1"
+
+netLogoTarget := org.nlogo.build.NetLogoExtension.directoryTarget(baseDirectory.value)
