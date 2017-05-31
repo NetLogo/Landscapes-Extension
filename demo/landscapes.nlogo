@@ -4,17 +4,16 @@ patches-own [
   height
 ]
 
-turtles-own
-[
-  peak? ;; indicates whether a turtle has reached a "peak",
-        ;; that is, it can no longer go "uphill" from where it stands
+turtles-own [
+  peak? ; indicates whether a turtle has reached a "peak",
+        ; that is, it can no longer go "uphill" from where it stands
 ]
 
 to setup
   clear-all
   landscapes:generate landscape "height"
   ask patches [ set pcolor scale-color grey height 0 1 ]
-  ;; put some turtles on patch centers in the landscape
+  ; put some turtles on patch centers in the landscape
   ask n-of population patches [
     sprout 1 [
       set peak? false
@@ -26,15 +25,15 @@ to setup
 end
 
 to go
-  ;; stop when all turtles are on peak
+  ; stop when all turtles are on peak
   if all? turtles [ peak? ] [ stop ]
   ask turtles [
-    ;; remember where we started
+    ; remember where we started
     let old-patch patch-here
-    ;; to use UPHILL, the turtles specify a patch variable
+    ; to use `uphill`, the turtles specify a patch variable
     uphill height
-    ;; are we still where we started? if so, we didn't
-    ;; move, so we must be on a peak
+    ; are we still where we started? if so, we didn't
+    ; move, so we must be on a peak
     if old-patch = patch-here [
       set peak? true
       set shape "target"
@@ -53,15 +52,14 @@ to cycle
   wait 1
   while [ not all? turtles [ peak? ] ] [ go ]
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 453
 18
-1066
-652
-100
-100
+1064
+630
+-1
+-1
 3.0
 1
 10
@@ -90,7 +88,7 @@ CHOOSER
 landscape
 landscape
 "3 POT HOLES" "ACKLEY'S FUNCTION" "ACKLEY'S PATH FUNCTION 10" "AXIS PARALLEL HYPER-ELLIPSOID FUNCTION" "BOHACHEVSKY'S FUNCTION" "BRANINS'S RCOS FUNCTION" "CPF1" "CPF2" "DE JONG F1" "EASOM'S FUNCTION" "EUCLIDEAN" "EXP" "F1" "F2" "F3" "F4 (PSHUBERT1)" "F5 (PSHUBERT2)" "F6 (QUARTIC)" "F7 (SHUBERT FUNCTION)" "FLAT" "G1" "G2" "G3" "GENERALIZED GRIEWANK FUNCTION" "GENERALIZED HIMMELBLAU'S FUNCTION" "GENERALIZED PENALIZED FUNCTION 1" "GENERALIZED PENALIZED FUNCTION 2" "GENERALIZED RASTRIGIN'S FUNCTION" "GENERALIZED ROSENBROCK'S FUNCTION" "GENERALIZED SCHWEFELS PROBLEM 2.26" "GOLDSTEIN-PRICE'S FUNCTION" "GRIEWANGK'S FUNCTION 8" "HANSENS FUNCTION" "HORN'S FMMEASY" "HORNS 5 PEAKS (MODIFIED)" "LANGERMANN'S FUNCTION 11 (M=4)" "LANGERMANN'S FUNCTION 11 (M=7)" "M1" "M2" "M3" "M4" "M5 (HIMMELBLAU'S FUNCTION)" "M6 (SHEKEL'S FOXHOLES)" "MICHALEWICZ'S FUNCTION 12" "MOVED AXIS PARALLEL HYPER-ELLIPSOID FUNCTION" "MULTI FUNCTION" "PEAKS" "QUARTIC FUNCTION (NOISE)" "RASTRIGIN'S FUNCTION 6" "RIPPLES" "ROOTS" "ROSENBROCK'S VALLEY (DE JONG F2)" "ROTATED HYPER-ELLIPSOID FUNCTION" "SCHAFFER'S FUNCTION" "SCHWEFEL'S FUNCTION 7" "SCHWEFEL'S PROBLEM 1.2" "SCHWEFEL'S PROBLEM 2.21" "SCHWEFEL'S PROBLEM 2.22" "SHUBERT FUNCTION" "SIX-HUMP CAMEL BACK FUNCTION" "SPHERE" "SQUASHED FROG FUNCTION (TIMBO)" "STEP FUNCTION" "SUM OF DIFFERENT POWER FUNCTION" "TEST FUNCTION F1" "TEST FUNCTION F2 (ROSENBROCK'S FUNCTION)" "TEST FUNCTION F3" "TEST FUNCTION F4 (QUARTIC FUNCTION)" "TEST FUNCTION F5 (SHEKEL'S FUNCTION)"
-7
+0
 
 BUTTON
 25
@@ -169,7 +167,7 @@ population
 population
 0
 1000
-800
+800.0
 1
 1
 NIL
@@ -554,9 +552,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.0.5
+NetLogo 6.0.1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -564,15 +561,14 @@ NetLogo 5.0.5
 @#$#@#$#@
 default
 0.0
--0.2 0 1.0 0.0
+-0.2 0 0.0 1.0
 0.0 1 1.0 0.0
-0.2 0 1.0 0.0
+0.2 0 0.0 1.0
 link direction
 true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 1
 @#$#@#$#@
