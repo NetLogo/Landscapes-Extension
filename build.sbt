@@ -11,6 +11,8 @@ libraryDependencies ++= Seq(
 
 name := "landscapes"
 
+version := "1.0.2"
+
 netLogoExtName := "landscapes"
 
 netLogoClassManager := "org.nlogo.extensions.landscapes.LandscapesExtension"
