@@ -1,4 +1,4 @@
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.8"
 
 enablePlugins(org.nlogo.build.NetLogoExtension)
 
@@ -15,6 +15,6 @@ netLogoExtName := "landscapes"
 
 netLogoClassManager := "org.nlogo.extensions.landscapes.LandscapesExtension"
 
-netLogoVersion := "6.0.1"
+netLogoVersion := "6.1.0-RC1"
 
 netLogoTarget := org.nlogo.build.NetLogoExtension.directoryTarget(baseDirectory.value)
