@@ -48,7 +48,7 @@ will give you a view that looks like this (the whitest parts are the "peaks" of 
 
 Note that, in general, the Landscapes extension works better with lots of patches. In the above example, both `max-pxcor` and `max-pycor` are set to `100`.
 
-####`landscapes:list`
+#### `landscapes:list`
 
 Reports a list of the available problem names.
 
