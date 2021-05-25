@@ -1,7 +1,3 @@
-![build status](https://api.travis-ci.org/NetLogo/Landscapes-Extension.svg?branch=master)
-
-***
-
 # NetLogo Landscapes Extension
 
 This extension is a thin wrapper around the continuous function optimization problems classes implemented in the [Optimization Algorithm Toolkit (OAT)](http://optalgtoolkit.sourceforge.net/).
