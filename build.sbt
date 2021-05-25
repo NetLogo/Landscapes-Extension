@@ -6,7 +6,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked", "-Xlint", "-Xfatal-warnings"
 
 libraryDependencies ++= Seq(
   "com.oat" % "optalgtoolkit" % "1.4" from
-    "http://ccl.northwestern.edu/devel/optalgtoolkit-1.4.jar"
+    "https://ccl.northwestern.edu/devel/optalgtoolkit-1.4.jar"
 )
 
 name := "landscapes"
@@ -17,6 +17,6 @@ netLogoExtName := "landscapes"
 
 netLogoClassManager := "org.nlogo.extensions.landscapes.LandscapesExtension"
 
-netLogoVersion := "6.1.0-RC1"
+netLogoVersion := "6.2.0"
 
 netLogoTarget := org.nlogo.build.NetLogoExtension.directoryTarget(baseDirectory.value)
