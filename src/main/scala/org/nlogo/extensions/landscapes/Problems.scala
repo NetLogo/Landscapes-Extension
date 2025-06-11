@@ -94,7 +94,7 @@ object Problems {
     new com.oat.domains.cfo.problems.GeneralizedHimmelblausFunction,
     new com.oat.domains.cfo.problems.Hansens,
     new com.oat.domains.cfo.problems.ShubertFunction)
-    .map(p ⇒ p.getName.toUpperCase(ENGLISH) -> p)(collection.breakOut)
+    .map(p => p.getName.toUpperCase(ENGLISH) -> p).toMap
   def names = problems.keys.toIndexedSeq.sorted
   def get(name: String) = {
     val problemName = name.toUpperCase(ENGLISH)

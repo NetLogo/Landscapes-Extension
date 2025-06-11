@@ -16,7 +16,7 @@ import org.nlogo.core.Syntax.commandSyntax
 import org.nlogo.core.Syntax.reporterSyntax
 
 class LandscapesExtension extends DefaultClassManager {
-  override def load(primManager: PrimitiveManager) {
+  override def load(primManager: PrimitiveManager): Unit = {
     primManager.addPrimitive("generate", new GeneratePrim())
     primManager.addPrimitive("list", new ListPrim())
   }
@@ -29,7 +29,7 @@ class ListPrim extends Reporter {
 
 class GeneratePrim() extends Command {
   override def getSyntax = commandSyntax(List(StringType, StringType))
-  override def perform(args: Array[Argument], context: Context) {
+  override def perform(args: Array[Argument], context: Context): Unit = {
     try {
       val problemName = args(0).getString
       val variableName = args(1).getString
