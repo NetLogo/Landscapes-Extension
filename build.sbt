@@ -3,7 +3,7 @@ import org.nlogo.build.NetLogoExtension
 enablePlugins(NetLogoExtension)
 
 name       := "landscapes"
-version    := "1.0.4"
+version    := "1.0.3"
 isSnapshot := true
 
 scalaVersion           := "3.7.0"
